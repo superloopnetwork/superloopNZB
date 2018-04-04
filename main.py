@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+from mappings import get_show
 import subprocess
 import re
 
@@ -26,7 +27,8 @@ def main():
 					pass
 				elif(sliding_size == current_size):
 					print 'ABOUT TO COPY'
-					move(directory)
+					module = get_show(directory)
+					
 					print 'AFTER MOVE COMPLETED'
 					refresh = False	
 				else:
