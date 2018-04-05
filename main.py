@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 from mappings import get_show
+from sjc import copy
 import subprocess
 import re
 
@@ -20,17 +21,17 @@ def main():
 				refresh = True
 
 			while refresh:
+
 				print 'NESTED WHILE LOOP'
 				current_size = get_size(directory)
-				if(re.search('UNPACK',directory)):
-					print 'REACHED UNPACK'
-					pass
-				elif(sliding_size == current_size):
+				
+				if(sliding_size == current_size):
 					print 'ABOUT TO COPY'
 					module = get_show(directory)
-					
-					print 'AFTER MOVE COMPLETED'
+					print '%s' % module
+					module(directory)	
 					refresh = False	
+				
 				else:
 					pass
 		else:
