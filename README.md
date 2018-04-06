@@ -1,6 +1,6 @@
 # superloopNZB
 
-Problem Statment: Majority, if not all of the newsgroup indexers only permit a single (1) IP address per api. This essentially means PVR applications such as sickbeard or sonarr may only be used by a single entity.
+Problem Statment: Majority, if not all of the newsgroup indexers only permit a single (1) IP address per API. Because the site only provide one API, this essentially means PVR applications such as sickbeard or sonarr may only be used by a single entity to an indexer. As soon as the newsgroup index site detects multiple IP addresses from the same API, the usual action is an immediate ban as they restrict account sharing.
 
 Use case: superloopNZB allows multiple users to share a single PRV application. Users would populate their favourite TV shows in the PVR application. Modify the dictionary file to tell superloopNZB where to send the downloaded content to (single or multiple destinations). superloopNZB sits in the background and constantly scans for any new content to arrive before reacting.
 
