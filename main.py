@@ -1,17 +1,20 @@
 #!/usr/bin/env python
 
 from mappings import get_show
-from sjc import copy
 import subprocess
 import re
+import os
+
 
 def main():
 
+	os.system('clear')
 
 	while True:
 		
 		if(int(ls() >= 1)):
 			directory = get_dir()
+
 			if(re.search('UNPACK',directory)):
 				refresh = False
 				pass
@@ -66,10 +69,5 @@ def get_size(directory):
 
 	return filesize
 	
-def move(directory):
-	print 'mv ~/movies/%s /mnt/movies/' % directory
-	mv = subprocess.call('mv ~/movies/%s /mnt/movies/' % directory, shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-	print 'mv complete'
-
 if __name__ == '__main__':
 	main()

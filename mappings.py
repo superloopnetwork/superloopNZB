@@ -1,10 +1,12 @@
 ######################## FUNCTIONS ##############################
 from lib.sjc import sjc
-from lib.default import nocopy
+from lib.sea import sea
+from lib.sjc_sea import sjc_sea
+from lib.default import shared 
 import re
 
 SHOWS_TO_COPY = {
-	'9-1-1' : sjc,
+	'9-1-1' : sjc_sea,
 	'20-20' : sjc,
 	'60.Minutes' : sjc,
 	'The.Affair' : sjc,
@@ -44,7 +46,7 @@ SHOWS_TO_COPY = {
 }
 
 DEFAULT_NOCOPY = {
-	'default' : nocopy
+	'default' : shared 
 }
 
 def get_show(directory):
