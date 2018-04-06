@@ -8,4 +8,4 @@ How to use:
 
 Simply execute 'python main.py' in bash.
 
-The current mounting points are ~/movies. You may modify the destination(s) in the /lib folder. To expand on this, destinations may be mounting points.
+The current scanning directory points to ~/movies. This is the folder where you newsgroup client (sabnzbd) downloads and extracts completed files to. You may modify the destination(s) in the /lib folder. To expand on this, destinations may be mounting points.
